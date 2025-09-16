@@ -1,4 +1,5 @@
-//Copilot, give me the next DSA topic in JavaScript with explanations and code examples. Continue from where we left off.
+//Copilot, give me the next DSA topic in JavaScript with explanations and code examples.
+//Continue from where we left off.
 //Topic: Arrays in JavaScript
 // =============================
 // DSA Day 1: Arrays in JavaScript
@@ -45,3 +46,48 @@ for (let i = 0; i < fruits.length; i++) {
 // - length    : Number of elements
 
 // Practice: Try creating your own array and use these methods!
+
+// =============================
+// DSA Day 2 (Continued): Array Algorithms
+// =============================
+
+// Topic 2: Linear Search
+// Linear search checks each element one by one to find a target value in the array.
+function linearSearch(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i; // Found at index i
+    }
+  }
+  return -1; // Not found
+}
+
+let numbers = [5, 3, 8, 4, 2];
+console.log("Linear Search for 4:", linearSearch(numbers, 4)); // Output: 3
+console.log("Linear Search for 10:", linearSearch(numbers, 10)); // Output: -1
+
+// Topic 2: Bubble Sort
+// Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them
+// if they are in the wrong order.
+function bubbleSort(arr) {
+  let n = arr.length;
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // Swap
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
+let unsorted = [5, 3, 8, 4, 2];
+console.log("Bubble Sort result:", bubbleSort(unsorted)); // Output: [2, 3, 4, 5, 8]
+
+// Practice:
+// - Try searching for different numbers in the array using linearSearch.
+// - Sort arrays with different values using bubbleSort.
+// - Experiment by changing the code and observing the results.
