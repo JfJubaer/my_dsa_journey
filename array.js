@@ -91,3 +91,51 @@ console.log("Bubble Sort result:", bubbleSort(unsorted)); // Output: [2, 3, 4, 5
 // - Try searching for different numbers in the array using linearSearch.
 // - Sort arrays with different values using bubbleSort.
 // - Experiment by changing the code and observing the results.
+
+// =============================
+// DSA Day 3: Two-Dimensional Arrays (Matrices)
+// =============================
+
+// What is a 2D Array?
+// A two-dimensional array (matrix) is an array of arrays, useful for
+// representing tables, grids, or matrices.
+
+// How to Create a 2D Array
+let matrix = [
+  [1, 2, 3], // Row 0
+  [4, 5, 6], // Row 1
+  [7, 8, 9], // Row 2
+];
+console.log("Matrix:", matrix);
+
+// Accessing Elements in a 2D Array
+// Syntax: matrix[row][column]
+console.log("Element at row 0, col 1:", matrix[0][1]); // Output: 2
+console.log("Element at row 2, col 0:", matrix[2][0]); // Output: 7
+
+// Looping Through a 2D Array
+console.log("All elements in the matrix:");
+for (let i = 0; i < matrix.length; i++) {
+  // Loop through rows
+  for (let j = 0; j < matrix[i].length; j++) {
+    // Loop through columns
+    console.log(`Element at [${i}][${j}]:`, matrix[i][j]);
+  }
+}
+
+// Example: Sum All Elements in a Matrix
+function sumMatrix(mat) {
+  let sum = 0;
+  for (let i = 0; i < mat.length; i++) {
+    for (let j = 0; j < mat[i].length; j++) {
+      sum += mat[i][j]; // Add each element to sum
+    }
+  }
+  return sum;
+}
+console.log("Sum of all elements in matrix:", sumMatrix(matrix)); // Output: 45
+
+// Practice:
+// - Create your own 2D array and access different elements.
+// - Write a function to find the maximum value in a matrix.
+// - Try printing the matrix in a formatted way.
