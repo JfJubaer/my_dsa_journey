@@ -53,15 +53,38 @@ class Queue {
 }
 
 // Example usage:
-let queue = new Queue();
-queue.enqueue(1);
-queue.enqueue(2);
-queue.enqueue(3);
-console.log("Queue after enqueues:", queue.items); // [1, 2, 3]
-console.log("Front:", queue.front()); // 1
-console.log("Dequeue:", queue.dequeue()); // 1
-console.log("Queue after dequeue:", queue.items); // [2, 3]
-console.log("Is queue empty?", queue.isEmpty()); // false
+let queue1 = new Queue();
+queue1.enqueue(1);
+queue1.enqueue(2);
+queue1.enqueue(3);
+console.log("Queue after enqueues:", queue1.items); // [1, 2, 3]
+console.log("Front:", queue1.front()); // 1
+console.log("Dequeue:", queue1.dequeue()); // 1
+console.log("Queue after dequeue:", queue1.items); // [2, 3]
+console.log("Is queue empty?", queue1.isEmpty()); // false
+
+// Simple Queue using functions and array
+let queue2 = [];
+
+function enqueue(element) {
+  queue2.push(element);
+}
+
+function dequeue() {
+  return queue2.length === 0 ? "Queue is empty" : queue2.shift();
+}
+
+function front() {
+  return queue2.length === 0 ? "Queue is empty" : queue2[0];
+}
+
+enqueue(1);
+enqueue(2);
+enqueue(3);
+console.log(queue2); // [1, 2, 3]
+console.log(dequeue()); // 1
+console.log(queue2); // [2, 3]
+console.log(front()); // 2
 
 // Practice:
 // - Try implementing queue operations with your own examples.
